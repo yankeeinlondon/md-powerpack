@@ -1,5 +1,12 @@
 // export API
-export type { BuilderApi } from "@yankeeinlondon/builder-api";
+import type { BuilderApi as BA, BuilderOptions, IPipelineStage } from "@yankeeinlondon/builder-api";
+/**
+ * A Builder API.
+ * 
+ * Generics indicate the shape of the options and which state of the pipeline the
+ * API is hooking into.
+ */
+export type BuilderApi<O extends BuilderOptions, S extends IPipelineStage> = BA<O,S>;
 
 // export builders
 export { default as meta } from "@yankeeinlondon/meta-builder";
