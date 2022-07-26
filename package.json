@@ -4,6 +4,15 @@
   "description": "A combination of useful \"builder apis\" for vite-plugin-md",
   "type": "module",
   "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --clean --dts",
     "build:validation": "node dist/index.js && node dist/index.cjs",

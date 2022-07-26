@@ -15,7 +15,7 @@ To use the core `vite-plugin-md` along with the powerpack's builders you would c
 ```ts
 import { defineConfig } from "vite";
 import Markdown from "vite-config-md";
-import Vue from "@vitejs/vue"
+import Vue from "@vitejs/vue";
 import { code, meta, link } from "md-powerpack";
 
 export default defineConfig({
