@@ -1,8 +1,8 @@
 import { mount } from "@vue/test-utils";
 import type { DefineComponent } from "vue";
-import { createApp, defineComponent } from "vue";
+import { createHead } from "@vueuse/head";
 import { createRouter, createWebHistory } from "vue-router";
-import type { Frontmatter } from "vite-plugin-md";
+import type { Frontmatter } from "@yankeeinlondon/builder-api";
 
 async function importFixture(fixture: string) {
   const assets = (await import(fixture)) as {
@@ -38,25 +38,26 @@ export const mountFixture = async (fixture: string) => {
 
 export const mountFixtureWithRouter = async (fixture: string) => {
   try {
-    // const sfc = await composeFixture(fixture, pluginOptions)
     const assets = await importFixture(fixture);
+    const {component} = assets;
+    const head = createHead();
     const router = createRouter({
       history: createWebHistory(),
       routes: [{
         path: "/",
-        component: assets.component,
+        component,
+      },
+      {
+        path: "/local-page",
+        component
       }],
     });
 
-    const App = defineComponent({
-      template: '<div class="wrapper"><router-link /></div>',
-    });
-
-    const app = createApp(App);
-    app.use(router);
-    const wrapper = mount(assets.component, { global: { plugins: [router] } });
+    const wrapper = mount(component, { global: { plugins: [router, head],  } });
+    const currentRoute = wrapper.vm.$router.currentRoute.value;
     return {
       ...assets,
+      currentRoute,
       wrapper,
     };
   } catch (error) {

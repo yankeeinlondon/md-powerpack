@@ -6,7 +6,18 @@
   "main": "dist/index.cjs",
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --clean --dts",
-    "test": "vitest"
+    "build:validation": "node dist/index.js && node dist/index.cjs",
+    "watch": "tsup src/index.ts --format=esm,cjs --watch --dts",
+    "lint": "run-p lint:*",
+    "lint:src": "eslint src/**/*.ts --fix",
+    "lint:test": "eslint test/**/*.ts --fix",
+    "test": "vitest",
+    "test:ci": "vitest run",
+    "test:ui": "vitest:ui",
+    "audit:fix": "pnpm audit --fix",
+    "release": "run-s lint release:latest test:ci audit:fix build:validation release:bump",
+    "release:latest": "pnpm install",
+    "release:bump": "bumpp"
   },
   "repository": {
     "type": "git",
@@ -36,6 +47,7 @@
     "@typescript-eslint/parser": "^5.31.0",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vue/test-utils": "^2.0.2",
+    "@vueuse/head": "^0.7.7",
     "@yankeeinlondon/happy-wrapper": "^2.5.0",
     "bumpp": "^8.2.1",
     "eslint": "^8.20.0",

@@ -1,6 +1,7 @@
 ---
 title: My App
-route: about
+layout: about
+routeName: About
 description: a simple test of this plugin
 ---
 
@@ -27,9 +28,9 @@ const baz = (foo: number, bar: string) => `${foo}${bar}`;
 
 ## Links
 
-When we _link_ to another page [locally](./local-page) it should get a different class and the `href` should be made into a `router-link`. In contrast, [external links](https://google.com) will
+When we _link_ to another page [locally](./local-page.md) it should get a different class and the `href` should be made into a `router-link`. In contrast, [external links](https://google.com) will
 remain as `href`'s' and have a different class applied to them.
 
 ## Meta
 
-Our frontmatter should translate into meta tags for the `title`, `description`, and the `route`.
+Our frontmatter should translate into meta tags for the `title`, `description`, into header tags and the `layout` will be moved to the "meta" property of the route, and `routeName` moved to the route's name.

@@ -7,6 +7,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.31.0
   '@vitejs/plugin-vue': ^3.0.1
   '@vue/test-utils': ^2.0.2
+  '@vueuse/head': ^0.7.7
   '@yankeeinlondon/builder-api': ^0.4.0
   '@yankeeinlondon/code-builder': ^1.0.5
   '@yankeeinlondon/happy-wrapper': ^2.5.0
@@ -49,6 +50,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.31.0_he2ccbldppg44uulnyq4rwocfa
   '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
   '@vue/test-utils': 2.0.2_vue@3.2.37
+  '@vueuse/head': 0.7.7_vue@3.2.37
   '@yankeeinlondon/happy-wrapper': 2.5.0_happy-dom@6.0.4
   bumpp: 8.2.1
   eslint: 8.20.0
@@ -581,6 +583,14 @@ packages:
     resolution: {integrity: sha512-E2P4oXSaWDqTZNbmKZFVLrNN/siVN78YkEqs7pHryWerrlZR9bBFLWdJwRoguX45Ru6HxIflzKl4vQvwRMwm5g==}
     peerDependencies:
       vue: ^3.0.1
+    dependencies:
+      vue: 3.2.37
+    dev: true
+
+  /@vueuse/head/0.7.7_vue@3.2.37:
+    resolution: {integrity: sha512-umsupiMPYxSMvREskQhcwhQ8zpnv8u1oKSB3Q1gclhsV53XAMTurkX+vPE4aBmGulHI1XEZp3N5ctEABEj3xqQ==}
+    peerDependencies:
+      vue: '>=3'
     dependencies:
       vue: 3.2.37
     dev: true
