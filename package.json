@@ -1,0 +1,59 @@
+{
+  "name": "md-powerpack",
+  "version": "1.0.0",
+  "description": "A combination of useful \"builder apis\" for vite-plugin-md",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yankeeinlondon/md-powerpack.git"
+  },
+  "keywords": [
+    "vite",
+    "vuejs",
+    "markdown"
+  ],
+  "author": "Ken Snyder <ken@ken.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yankeeinlondon/md-powerpack/issues"
+  },
+  "homepage": "https://github.com/yankeeinlondon/md-powerpack#readme",
+  "dependencies": {
+    "@yankeeinlondon/code-builder": "^1.0.5",
+    "@yankeeinlondon/link-builder": "^1.0.4",
+    "@yankeeinlondon/meta-builder": "^1.0.5"
+  },
+  "devDependencies": {
+    "@rollup/pluginutils": "^4.2.1",
+    "@types/node": "14",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@yankeeinlondon/builder-api": "^0.4.0",
+    "@yankeeinlondon/happy-wrapper": "^2.5.0",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "esno": "^0.16.3",
+    "fp-ts": "^2.12.2",
+    "happy-dom": "^6.0.4",
+    "inferred-types": "^0.22.0",
+    "markdown-it": "^13.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rollup": "^2.77.1",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.2.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.3",
+    "vite-plugin-md": "^0.20.0",
+    "vue": "^3.2.37"
+  }
+}
