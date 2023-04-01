@@ -4,7 +4,7 @@
 
 ## Included Builders
 
-- **code** - [@yankeeinlondon/code-builder](https://github.com/yankeeinlondon/link-builder) adds code highlighting to pages with light/dark themes out of the box.
+- **code** - [@yankeeinlondon/code-builder](https://github.com/yankeeinlondon/code-builder) adds code highlighting to pages with light/dark themes out of the box.
 - **link** - [@yankeeinlondon/link-builder](https://github.com/yankeeinlondon/link-builder) adds useful classes to enhance ability to style link types, switches local links to use VueJS router, and more.
 - **meta** - [@yankeeinlondon/meta-builder](https://github.com/yankeeinlondon/meta-builder) adds more control over setting page and route meta properties
 
